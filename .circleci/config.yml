@@ -1,10 +1,31 @@
+# version: 2
+
+# jobs:
+#   build & push:
+#     docker:
+#       - image: circleci/node:latest
+#     steps:
+#       - checkout
+#       - run: ls
+#       - setup_remote_docker
+#       - run: docker build -t tactless/test-ci:develop-0.0.1 .
+#       - run: docker push tactless/test-ci:develop-0.0.1
+# workflows:
+#   version: 2
+#   workflow:
+#     jobs:
+#       - build & push
+
 version: 2
 
 jobs:
   build & push:
-    docker:
-      - image: circleci/node:latest
+    machine: true
     steps:
+      - run
+        name: 'Setup environment'
+        command: 
+          apt-get install npm node docker
       - checkout
       - run: ls
       - setup_remote_docker
