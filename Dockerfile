@@ -1,7 +1,7 @@
 FROM circleci/node:7.10
 
 # install simple http server for serving static content
-RUN npm install -g http-server
+RUN npm install http-server
 
 # NPM setup
 WORKDIR /src
