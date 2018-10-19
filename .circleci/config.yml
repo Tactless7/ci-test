@@ -2,14 +2,12 @@ version: 2
 
 jobs:
   build:
-    docker:
-      - image: circleci/node:7.10
+    machine: true
     steps:
       - checkout
       - run: docker build -t tactless/test-ci:develop-0.0.1 .
   push:
-    docker:
-      - image: circleci/node:7.10
+    machine: true
     steps:
       - checkout
       - run: docker push tactless/test-ci:develop-0.0.1
