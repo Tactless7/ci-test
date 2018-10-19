@@ -2,12 +2,12 @@ FROM circleci/node:7.10
 
 # NPM setup
 WORKDIR /src
+RUN ls
 
 # Front setup
 COPY package.json package.json
 RUN npm install
 
-RUN ls
 RUN ls /src
 COPY . /src
 
