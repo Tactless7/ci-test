@@ -16,3 +16,9 @@ jobs:
       - checkout
       - setup_remote_docker
       - run: docker push tactless/test-ci:develop-0.0.1
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - build
+      - push
