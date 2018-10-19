@@ -8,6 +8,8 @@ jobs:
       - checkout
       - run: docker build -t tactless/test-ci:develop-0.0.1 .
   push:
+    docker:
+      - image: circleci/node:7.10
     steps:
       - checkout
       - run: docker push tactless/test-ci:develop-0.0.1
