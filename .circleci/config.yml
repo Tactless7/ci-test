@@ -7,11 +7,12 @@ jobs:
     steps:
       - checkout
       - run: ls
+      - setup_remote_docker
       - run: docker build -t tactless/test-ci:develop-0.0.1 .
   push:
     docker:
       - image: circleci/node:7.10
     steps:
       - checkout
-      - run: dockerd
+      - setup_remote_docker
       - run: docker push tactless/test-ci:develop-0.0.1
