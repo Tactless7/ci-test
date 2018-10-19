@@ -23,7 +23,7 @@ jobs:
     machine: true
     steps:
       - run
-        name: 'Setup environment'
+        name: Setup environment
         command: 
           apt-get install npm node docker
       - checkout
