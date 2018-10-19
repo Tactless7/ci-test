@@ -9,7 +9,7 @@ RUN sudo npm install
 
 COPY . /src
 
-RUN npm run build
+RUN sudo npm run build
 
 EXPOSE 80 443
 
