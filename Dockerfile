@@ -1,4 +1,4 @@
-FROM circleci/node:7.10
+FROM circleci/node:latest
 
 # NPM setup
 WORKDIR /src
