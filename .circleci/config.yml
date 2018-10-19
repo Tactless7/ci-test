@@ -6,7 +6,7 @@ jobs:
       - image: circleci/node:7.10
     steps:
       - checkout
-      - run: dockerd
+      - run: ls
       - run: docker build -t tactless/test-ci:develop-0.0.1 .
   push:
     docker:
