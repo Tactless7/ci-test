@@ -22,10 +22,7 @@ jobs:
   build & push:
     machine: true
     steps:
-      - run
-        name: Setup environment
-        command: 
-          apt-get install npm node docker
+      - run: apt-get install npm node docker
       - checkout
       - run: ls
       - setup_remote_docker
