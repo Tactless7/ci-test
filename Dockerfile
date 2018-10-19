@@ -7,10 +7,12 @@ WORKDIR /src
 COPY package.json package.json
 RUN npm install
 
+RUN ls
+RUN ls /src
 COPY . /src
 
 RUN npm run build
 
-EXPOSE 8080
+EXPOSE 80 443
 
-CMD [ "npm", "run serve" ]
+CMD [ "npm", "run", "start" ]
