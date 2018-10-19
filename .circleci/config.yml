@@ -25,7 +25,6 @@ jobs:
       - run: apt-get install npm node docker
       - checkout
       - run: ls
-      - setup_remote_docker
       - run: docker build -t tactless/test-ci:develop-0.0.1 .
       - run: docker push tactless/test-ci:develop-0.0.1
 workflows:
