@@ -1,0 +1,10 @@
+sudo: required
+
+language: node_js
+
+services:
+  - docker
+
+script:
+  - docker build -t tactless/ci-front:test .
+  - docker push tactless/ci-front:test
